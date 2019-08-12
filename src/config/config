@@ -1,0 +1,5 @@
+const url = 'mongodb+srv://Lundbergarn:nodetest1234@cluster0-juyf8.mongodb.net/flashcards?retryWrites=true&w=majority';
+
+module.exports = url;
+
+// mongodb://127.0.0.1:27017/flashcards-api
