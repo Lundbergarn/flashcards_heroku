@@ -2,7 +2,7 @@
   "name": "todo-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "engines": {
     "node": "v10.15.3"
   },
@@ -12,10 +12,11 @@
     "server": "nodemon src/index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
+  "eslintConfig": {"extends": "react-app"  },
   "license": "ISC",
   "dependencies": {
     "concurrently": "^4.1.1",
@@ -24,7 +25,11 @@
     "mongodb": "^3.2.7",
     "mongoose": "^5.6.5",
     "require": "^2.4.20",
-    "validator": "^11.1.0"
+    "validator": "^11.1.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
